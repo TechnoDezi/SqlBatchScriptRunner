@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlScriptRunner", "SqlScriptRunner\SqlScriptRunner.csproj", "{AEF22488-4B54-4F4F-B6A6-E03A8C6A3EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF22488-4B54-4F4F-B6A6-E03A8C6A3EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF22488-4B54-4F4F-B6A6-E03A8C6A3EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF22488-4B54-4F4F-B6A6-E03A8C6A3EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF22488-4B54-4F4F-B6A6-E03A8C6A3EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://technodezi.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SqlScriptRunner\\SqlScriptRunner.csproj
+		SccProjectName1 = SqlScriptRunner
+		SccLocalPath1 = SqlScriptRunner
+	EndGlobalSection
+EndGlobal
