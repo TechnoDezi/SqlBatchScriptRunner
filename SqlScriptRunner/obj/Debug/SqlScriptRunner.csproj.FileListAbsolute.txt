@@ -30,3 +30,6 @@ C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\Sq
 C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\SqlScriptRunner\bin\Debug\microsoft.sqlserver.batchparser.dll
 C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\SqlScriptRunner\bin\Debug\Microsoft.SqlServer.BatchParserClient.dll
 C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\SqlScriptRunner\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Debug\SqlScriptRunner.exe.config
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Debug\SqlScriptRunner.exe
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Debug\SqlScriptRunner.pdb
