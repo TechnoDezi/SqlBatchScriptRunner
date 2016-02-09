@@ -112,8 +112,6 @@ namespace SqlScriptRunner
 
             Task.Run(() =>
             {
-                SqlConnection sqlConnection = new SqlConnection(txtConnString.Text);
-
                 int index = 0;
                 foreach (string file in files)
                 {
@@ -133,20 +131,18 @@ namespace SqlScriptRunner
                                 lblPercComplete.Text = (((decimal)index / (decimal)files.Count) * 100).ToString("#.00") + "%";
                             }));
 
-                            ServerConnection svrConnection = new ServerConnection(sqlConnection);
-                            Server server = new Server(svrConnection);
+                            using (SqlConnection sqlConnection = new SqlConnection(txtConnString.Text))
+                            {
+                                ServerConnection svrConnection = new ServerConnection(sqlConnection);
+                                Server server = new Server(svrConnection);
 
-                            server.ConnectionContext.InfoMessage += ConnectionContext_InfoMessage;
-                            
-                            server.ConnectionContext.ExecuteNonQuery(sqlData);
+                                server.ConnectionContext.InfoMessage += ConnectionContext_InfoMessage;
+
+                                server.ConnectionContext.ExecuteNonQuery(sqlData);
+                            }
                         }
                         catch (Exception ex)
                         {
-                            if (sqlConnection.State != ConnectionState.Closed)
-                            {
-                                sqlConnection.Close();
-                            }
-
                             errors++;
                             outputLog.Append("Error in file: " + file + Environment.NewLine);
                             outputLog.Append(ex.Message.ToString() + Environment.NewLine);

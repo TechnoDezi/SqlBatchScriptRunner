@@ -34,3 +34,39 @@ C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\Sq
 C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\SqlScriptRunner\bin\Release\SqlScriptRunner.application
 C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.exe.manifest
 C:\Users\Techn\Development\KooBoo Development\1 Test Projects\SqlScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.application
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\SqlScriptRunner.exe.config
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.exe
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.pdb
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\SqlScriptRunner.exe.manifest
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\SqlScriptRunner.application
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\SqlScriptRunner.exe
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\SqlScriptRunner.pdb
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\microsoft.sqlserver.batchparser.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.BatchParserClient.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.Smo.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.Helpers.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.Mvc.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.Razor.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.WebPages.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.Dmf.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.Helpers.xml
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.Mvc.xml
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.Razor.xml
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.WebPages.xml
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.csprojResolveAssemblyReference.cache
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.ErrorLog.resources
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.Form1.resources
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.Properties.Resources.resources
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.csproj.GenerateResource.Cache
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.exe.manifest
+C:\Users\Techn\Development\GitHub\SqlBatchScriptRunner\SqlScriptRunner\obj\Release\SqlScriptRunner.application
