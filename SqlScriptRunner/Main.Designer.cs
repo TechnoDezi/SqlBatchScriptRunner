@@ -61,6 +61,8 @@
             // 
             // txtConnString
             // 
+            this.txtConnString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConnString.Location = new System.Drawing.Point(145, 18);
             this.txtConnString.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConnString.Name = "txtConnString";
@@ -70,6 +72,7 @@
             // 
             // btnTestConnection
             // 
+            this.btnTestConnection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTestConnection.Location = new System.Drawing.Point(1097, 16);
             this.btnTestConnection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTestConnection.Name = "btnTestConnection";
@@ -81,6 +84,9 @@
             // 
             // lvFilesToRun
             // 
+            this.lvFilesToRun.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvFilesToRun.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chFolder,
             this.chFileName,
@@ -124,6 +130,8 @@
             // 
             // txtFolderPath
             // 
+            this.txtFolderPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFolderPath.Location = new System.Drawing.Point(145, 50);
             this.txtFolderPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFolderPath.Name = "txtFolderPath";
@@ -133,6 +141,7 @@
             // 
             // btnBrowseFolder
             // 
+            this.btnBrowseFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrowseFolder.Location = new System.Drawing.Point(1097, 48);
             this.btnBrowseFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBrowseFolder.Name = "btnBrowseFolder";
@@ -151,10 +160,10 @@
             this.ssStatus.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ssStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.ssStatus.Location = new System.Drawing.Point(0, 632);
+            this.ssStatus.Location = new System.Drawing.Point(0, 626);
             this.ssStatus.Name = "ssStatus";
             this.ssStatus.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.ssStatus.Size = new System.Drawing.Size(1213, 24);
+            this.ssStatus.Size = new System.Drawing.Size(1213, 30);
             this.ssStatus.TabIndex = 9;
             this.ssStatus.Text = "statusStrip1";
             // 
@@ -162,13 +171,14 @@
             // 
             this.lblStatus.AutoSize = false;
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(850, 19);
+            this.lblStatus.Size = new System.Drawing.Size(850, 25);
             this.lblStatus.Text = "Status: ";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
             // 
             // btnRunScripts
             // 
+            this.btnRunScripts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRunScripts.Location = new System.Drawing.Point(1097, 96);
             this.btnRunScripts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRunScripts.Name = "btnRunScripts";
@@ -191,6 +201,7 @@
             // 
             // btnExportLog
             // 
+            this.btnExportLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportLog.Location = new System.Drawing.Point(1097, 581);
             this.btnExportLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExportLog.Name = "btnExportLog";

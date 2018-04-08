@@ -26,6 +26,8 @@ namespace SqlScriptRunner
 
         private void btnBrowseFolder_Click(object sender, EventArgs e)
         {
+            fbdFolderBrowserDialog.SelectedPath = Application.StartupPath;
+
             if (fbdFolderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 txtFolderPath.Text = fbdFolderBrowserDialog.SelectedPath;
