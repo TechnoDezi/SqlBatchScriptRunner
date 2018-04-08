@@ -12,23 +12,23 @@ using System.Windows.Forms;
 
 namespace SqlScriptRunner
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         const string statusFormat = "Status: {0}";
         StringBuilder outputLog = new StringBuilder();
         StringBuilder messageLog = new StringBuilder();
         int errors = 0;
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
 
         private void btnBrowseFolder_Click(object sender, EventArgs e)
         {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            if (fbdFolderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                txtFolderPath.Text = folderBrowserDialog1.SelectedPath;
+                txtFolderPath.Text = fbdFolderBrowserDialog.SelectedPath;
                 lvFilesToRun.Items.Clear();
                 lblPercComplete.Visible = false;
                 lblStatus.ForeColor = Color.Black;
@@ -73,6 +73,9 @@ namespace SqlScriptRunner
                 int itemCount = 0;
                 foreach (FileInfo file in files)
                 {
+                    if (!file.Name.ToLowerInvariant().EndsWith(".sql"))
+                        continue;
+
                     itemCount++;
                     string directory = file.Directory.Name;
 
@@ -200,10 +203,10 @@ namespace SqlScriptRunner
 
         private void btnMessages_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.FileName = "Message Log";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            sfdSaveFileDialog.FileName = "Message Log";
+            if (sfdSaveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(saveFileDialog1.FileName, messageLog.ToString());
+                File.WriteAllText(sfdSaveFileDialog.FileName, messageLog.ToString());
                 MessageBox.Show("Message log exported");
             }
         }
