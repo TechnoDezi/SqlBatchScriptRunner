@@ -1,5 +1,6 @@
 ﻿using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,13 +16,59 @@ namespace SqlScriptRunner
     public partial class Main : Form
     {
         const string statusFormat = "Status: {0}";
+        int errors = 0;
         StringBuilder outputLog = new StringBuilder();
         StringBuilder messageLog = new StringBuilder();
-        int errors = 0;
+        AppConfig appConfig;
+
+            
+        string ConfigFilePath
+        {
+            get
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "appConfig.json");
+            }
+        }
 
         public Main()
         {
             InitializeComponent();
+
+            var config = LoadInitialConfig();
+            this.txtConnectionString.Text = config.ConnectionString;
+            this.txtScriptFolderPath.Text = config.ScriptFolder;
+            LoadFiles();
+        }
+
+        private AppConfig LoadInitialConfig()
+        {
+            //check config file exists
+            if(File.Exists(this.ConfigFilePath))
+            {
+                string configString = File.ReadAllText(this.ConfigFilePath);
+                return JsonConvert.DeserializeObject<AppConfig>(configString);
+            }
+            else
+            {
+                AppConfig config = new AppConfig
+                {
+                    ScriptFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory).Parent.FullName,
+                    ConnectionString = "server=(localdb)\\mssqllocaldb;database=[DBName];Integrated Security=true;"
+                };
+
+                SaveConfig(config);
+
+                return config;
+            }
+        }
+
+        private void SaveConfig(AppConfig config)
+        {
+            if (config == null)
+                return;
+
+            string configString = JsonConvert.SerializeObject(config);
+            File.WriteAllText(this.ConfigFilePath, configString);
         }
 
         private void btnBrowseFolder_Click(object sender, EventArgs e)
@@ -30,7 +77,7 @@ namespace SqlScriptRunner
 
             if (fbdFolderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                txtFolderPath.Text = fbdFolderBrowserDialog.SelectedPath;
+                txtScriptFolderPath.Text = fbdFolderBrowserDialog.SelectedPath;
                 lvFilesToRun.Items.Clear();
                 lblPercComplete.Visible = false;
                 lblStatus.ForeColor = Color.Black;
@@ -41,11 +88,11 @@ namespace SqlScriptRunner
 
         private void btnTestConnection_Click(object sender, EventArgs e)
         {
-            if (txtConnString.Text != "")
+            if (txtConnectionString.Text != "")
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection(txtConnString.Text);
+                    SqlConnection conn = new SqlConnection(txtConnectionString.Text);
                     conn.Open();
 
                     lblStatus.Text = string.Format(statusFormat, "Connection Successful");
@@ -69,7 +116,7 @@ namespace SqlScriptRunner
 
             Task.Run(() =>
             {
-                DirectoryInfo di = new DirectoryInfo(txtFolderPath.Text);
+                DirectoryInfo di = new DirectoryInfo(txtScriptFolderPath.Text);
                 FileInfo[] files = di.GetFiles("*.sql", SearchOption.AllDirectories);
 
                 int itemCount = 0;
@@ -136,7 +183,7 @@ namespace SqlScriptRunner
                                 lblPercComplete.Text = (((decimal)index / (decimal)files.Count) * 100).ToString("#.00") + "%";
                             }));
 
-                            using (SqlConnection sqlConnection = new SqlConnection(txtConnString.Text))
+                            using (SqlConnection sqlConnection = new SqlConnection(txtConnectionString.Text))
                             {
                                 ServerConnection svrConnection = new ServerConnection(sqlConnection);
                                 Server server = new Server(svrConnection);
@@ -211,6 +258,18 @@ namespace SqlScriptRunner
                 File.WriteAllText(sfdSaveFileDialog.FileName, messageLog.ToString());
                 MessageBox.Show("Message log exported");
             }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //save config
+            AppConfig config = new AppConfig
+            {
+                ScriptFolder = this.txtScriptFolderPath.Text,
+                ConnectionString = this.txtConnectionString.Text
+            };
+
+            SaveConfig(config);
         }
     }
 }
