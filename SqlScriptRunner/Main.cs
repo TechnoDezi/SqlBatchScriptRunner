@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -117,9 +118,9 @@ namespace SqlScriptRunner
             Task.Run(() =>
             {
                 DirectoryInfo di = new DirectoryInfo(txtScriptFolderPath.Text);
-                FileInfo[] files = di.GetFiles("*.sql", SearchOption.AllDirectories);
-
+                List<FileInfo> files = di.GetFiles("*.sql", SearchOption.AllDirectories).ToList().OrderBy(f => f.Name).ToList();
                 int itemCount = 0;
+                
                 foreach (FileInfo file in files)
                 {
                     if (!file.Name.ToLowerInvariant().EndsWith(".sql"))
